@@ -20,8 +20,8 @@
         }
     </script>
   </head>
-    <body class="bg-gray-100">
-      <nav class="bg-white shadow-lg fixed top-0 left-0 w-full z-10">
+    <body style="background-color: rgb(250, 252, 249)">
+      <nav style="background-color: rgb(250, 252, 249)" class="shadow-lg fixed top-0 left-0 w-full z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div class="flex justify-between h-16">
             <!-- Logo -->
@@ -69,34 +69,43 @@
           });
         </script>
       </nav>
-      <section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('./assets/img/header.jpg');">
-        <!-- <div class="absolute inset-0 bg-black opacity-50"></div> -->
+      <section class="relative w-full h-screen">
         <div class="flex items-center justify-center h-full">
-          <h1 class="text-white text-5xl md:text-7xl font-bold font-serif z-10">
-            Juliette et Yann
-          </h1>
+          <video class="background-video" autoplay loop muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+            <source src="./assets/Vidéo site mariage paysage.mp4" type="video/mp4">
+            <img src="./assets/img/IMG_8062.png" />
+          </video>
+          <div class="absolute inset-0 bg-black opacity-30"></div>
+          <div class="z-10">
+            <h1 class="text-white text-5xl md:text-7xl font-bold font-serif mb-10" style="text-shadow: 0 0 13px rgba(0,0,0,0.5);">
+              Juliette et Yann
+            </h1>
+            <p class="text-center text-white text-2xl" style="text-shadow: 0 0 13px rgba(0,0,0,0.5);">
+              12 juillet 2025
+            </p>
+          </div>
         </div>
       </section>
       <section class="relative w-full h-screen bg-cover bg-center" style="background-image: url('./assets/img/background.jpg');">
         <div class="flex justify-center h-full flex-col">
-          <p class="text-center my-6 text-2xl">
+          <p class="text-center my-6 text-lg md:text-2xl">
             Venez célébrer notre mariage !
           </p>
-          <h2 class="text-4xl font-bold text-center my-6">
+          <h2 class="text-2xl md:text-4xl font-bold text-center my-6">
             12 juillet 2025
           </h2>
-          <p class="text-center my-6 text-2xl">
+          <p class="text-center my-6 text-lg md:text-2xl">
             Saint-Félix-De-Pallières, Gard
           </p>
         </div>
       </section>
       <section class="relative w-full h-screen">
-        <div class="flex justify-center items-center h-full flex-col">
-          <h2 class="text-3xl font-bold text-center font-serif mb-10">
+        <div class="flex justify-center items-center flex-col py-10">
+          <h2 class="text-lg md:text-2xl font-bold text-center font-serif mb-10">
             Bienvenue !
           </h2>
           <img src="./assets/img/bienvenue.jpg" width="750" class="mb-10"/>
-          <h3 class="text-xl font-bold text-center mb-5">
+          <h3 class="text-lg md:text-xl font-bold text-center mb-5">
             Nous allons nous marier !
           </h3>
           <p class="text-center">

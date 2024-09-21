@@ -6,7 +6,9 @@
 
 <body style="background-color: rgb(250, 252, 249)">
     {% include nav.html %}
-    {{ content }}
+    <div style="margin-top: 72px; min-height: calc(100vh - 76px - 72px)">
+        {{ content }}
+    </div>
     {% include footer.html %}
 </body>
 

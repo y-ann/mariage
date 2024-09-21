@@ -1,39 +1,63 @@
-<nav class="bg-white shadow-lg">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between h-16">
-        <!-- Logo -->
-        <div class="flex-shrink-0 flex items-center">
-          <img class="h-8 w-auto" src="your-logo-url.png" alt="Wedding Logo">
-        </div>
+<nav style="background-color: rgb(250, 252, 249)" class="shadow-lg fixed top-0 left-0 w-full z-20">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0 flex items-center">
+        <img src="./assets/img/logo.jpg" width="72" />
+      </div>
 
-        <!-- Menu items -->
-        <div class="hidden sm:flex space-x-8">
-          <a href="#bienvenue" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">Bienvenue</a>
-          <a href="#confirmer" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">Confirmer sa présence</a>
-          <a href="#infos" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">Infos pratiques</a>
-          <a href="#hebergements" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">Hébergements</a>
-          <a href="#cadeau" class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium">Cadeau de mariage</a>
-        </div>
+      <!-- Menu items -->
+      <div class="hidden sm:flex space-x-8 ">
+        <a href="index.html"
+          class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium content-center">Bienvenue</a>
+        <a href="confirmer.html"
+          class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium content-center">Confirmer sa
+          présence</a>
+        <a href="infos.html"
+          class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium content-center">Infos
+          pratiques</a>
+        <a href="hebergements.html"
+          class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium content-center">Hébergements</a>
+        <a href="cadeau.html"
+          class="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-md font-medium content-center">Cadeau de
+          mariage</a>
+      </div>
 
-        <!-- Mobile menu button -->
-        <div class="sm:hidden flex items-center">
-          <button type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900" aria-controls="mobile-menu" aria-expanded="false">
-            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-            </svg>
-          </button>
-        </div>
+      <!-- Mobile menu button -->
+      <div class="sm:hidden flex items-center" id="mobile-menu-button">
+        <button type="button" class="text-gray-600 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+          aria-controls="mobile-menu" aria-expanded="false">
+          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
       </div>
     </div>
+  </div>
 
-    <!-- Mobile menu -->
-    <div class="sm:hidden" id="mobile-menu">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <a href="#bienvenue" class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Bienvenue</a>
-        <a href="#confirmer" class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Confirmer sa présence</a>
-        <a href="#infos" class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Infos pratiques</a>
-        <a href="#hebergements" class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Hébergements</a>
-        <a href="#cadeau" class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Cadeau de mariage</a>
-      </div>
+  <!-- Mobile menu -->
+  <div class="sm:hidden" id="mobile-menu">
+    <div class="px-2 pt-2 pb-3 space-y-1">
+      <a href="index.html"
+        class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Bienvenue</a>
+      <a href="confirmer.html"
+        class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Confirmer sa
+        présence</a>
+      <a href="infos.html"
+        class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Infos pratiques</a>
+      <a href="hebergements.html"
+        class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Hébergements</a>
+      <a href="cadeau.html"
+        class="text-gray-600 hover:text-gray-900 block px-3 py-2 rounded-md text-base font-medium">Cadeau de mariage</a>
     </div>
-  </nav>
+  </div>
+  <script>
+    const menuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenu.classList.add('hidden');
+
+    menuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</nav>

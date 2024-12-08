@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<section class="relative w-full px-4"> <!-- Ajout de padding horizontal -->
+    <div class="flex justify-center items-center flex-col py-10 container mx-auto">
+        <!-- Conteneur centré avec marges -->
+        <h1 class="text-xl md:text-3xl font-bold text-center font-serif mb-10">
+            Hébergements
+        </h1>
+        <p class="text-center mb-5">
+            Voici la liste des hébergements que nous avons compilé pour vous. <b>Ne tardez pas avant de réserver un
+                logement.</b> Les Cévennes est une région très prisée des touristes pendant les vacances scolaires.
+            En cette période, les chambres d'hôtes ou les gites acceptent les clients pour 2 ou 3 nuits minimum.
+            Tournez-vous plutôt sur les hôtels ou les Airbnb si vous ne souhaitez réserver que le samedi soir.
+        </p>
+        <p class="text-center mb-3">
+            ***
+        </p>
+        <p class="text-center mb-5">
+            Notez bien qu'un service de <b>taxi</b> sera à votre disposition toute la nuit pour rentrer à votre logement
+            en toute sécurité.
+            Le taxi sera au prix fixe de 10€ par personne. Ainsi vous pouvez prendre un logement dans un rayon de 10km.
+        </p>
+        <hr style="border: solid 1px rgba(0,0,0,0.3); width: 100px;" class="mb-10" />
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-6xl mx-auto">
+            {% for hebergement in site.data.hebergements %}
+            <div class="bg-white rounded-lg shadow-lg p-6 w-full">
+                <h4 class="text-xl font-bold mb-2">{{ hebergement.Nom }}</h4>
+                <p class="text-gray-600 mb-2"><strong>Type:</strong> {{ hebergement.Type }}</p>
+                <p class="text-gray-600 mb-2"><strong>Lieu:</strong> {{ hebergement["Ou"] }}</p>
+                {% if hebergement.Telephone %}
+                <p class="text-gray-600 mb-2"><strong>Téléphone:</strong> {{ hebergement.Telephone }}</p>
+                {% endif %}
+                {% if hebergement["Site internet"] %}
+                <p class="text-gray-600 mb-2">
+                    <a href="{{ hebergement['Site internet'] }}" target="_blank" class="text-blue-500 underline">Voir le
+                        site</a>
+                </p>
+                {% endif %}
+                {% if hebergement.Commentaire %}
+                <p class="text-gray-600 mb-2"><strong>Commentaire:</strong> {{ hebergement.Commentaire }}</p>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

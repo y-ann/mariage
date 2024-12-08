@@ -29,7 +29,7 @@ layout: default
             <div class="bg-white rounded-lg shadow-lg p-6 w-full">
                 <h4 class="text-xl font-bold mb-2">{{ hebergement.Nom }}</h4>
                 <p class="text-gray-600 mb-2"><strong>Type:</strong> {{ hebergement.Type }}</p>
-                <p class="text-gray-600 mb-2"><strong>Lieu:</strong> {{ hebergement["Ou"] }}</p>
+                <p class="text-gray-600 mb-2"><strong>Lieu:</strong> {{ hebergement.Lieu }}</p>
                 {% if hebergement.Telephone %}
                 <p class="text-gray-600 mb-2"><strong>Téléphone:</strong> {{ hebergement.Telephone }}</p>
                 {% endif %}
